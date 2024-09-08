@@ -1,0 +1,370 @@
+.bicicletas-bg .bicicletas-bg:nth-of-type(2) {
+  background-image: linear-gradient(
+    to right,
+    var(--cor-0) 30%,
+    var(--cor-11) 0%
+  );
+}
+
+.bicicletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: url("../../img/dec/top-right.svg") no-repeat top 40px right 20px;
+}
+
+.bicicletas-imagem {
+  display: grid;
+}
+
+.bicicletas-imagem img {
+  grid-area: 1/1;
+}
+
+.bicicletas-imagem span {
+  grid-area: 1/1;
+  place-self: start end;
+  margin-top: 20px;
+  padding: 8px 16px 8px 8px;
+  border-radius: 5px 0 0 5px;
+  background-color: var(--cor-12);
+}
+
+.bicicletas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+}
+
+.bicicletas h2,
+.bicicletas p {
+  grid-column: 1 / -1;
+}
+
+.bicicletas h2 {
+  margin-bottom: 20px;
+}
+
+.bicicletas h2::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  margin-bottom: 8px;
+}
+
+.bicicletas p {
+  margin-bottom: 32px;
+}
+
+.bicicletas a {
+  place-self: end;
+}
+
+.bicicletas ul {
+  display: grid;
+  gap: 16px;
+}
+
+.bicicletas li {
+  display: flex;
+  align-items: center;
+}
+
+.bicicletas-conteudo img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.nossas-vantagens {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 75px;
+  background-color: var(--cor-12);
+  justify-items: center;
+}
+.nossas-vantagens-van {
+  background-color: var(--cor-12);
+  padding: 75px;
+}
+
+/* perguntas */
+
+.perguntas {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  line-height: 2;
+  margin-left: 1.2rem;
+}
+.perguntas > div {
+  transition: all 0.4s ease-in-out;
+}
+.perguntas > div:hover dd {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  height: auto;
+  display: block;
+}
+
+.perguntas dd {
+  /* opacity: 0; */
+  /* pointer-events: none; */
+  /* visibility: hidden; */
+  height: 0;
+  transition: 0.4s ease-in-out;
+  display: none;
+}
+
+.perguntas div {
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.perguntas dt {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  cursor: pointer;
+}
+
+.perguntas dt::before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: var(--cor-p1);
+  transition: width 0.2s;
+}
+.perguntas dt::after {
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 14px;
+  margin-right: 8px;
+  background: url("../../img/icones/seta-abrir.svg");
+  transition: transform 0.4s ease-in-out;
+}
+
+.perguntas dt:hover::after {
+  transform: rotate(180deg);
+  transition: 1.3;
+}
+
+.perguntas div:nth-child(odd) {
+  background-color: var(--cor-1);
+}
+
+/* Contato */
+
+#contato {
+  background: linear-gradient(var(--cor-11) 500px, var(--cor-1) 0px);
+  margin: 0;
+  max-width: initial;
+}
+
+.contato {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  margin-bottom: 300px;
+}
+
+.contato-dados,
+.contato-formulario {
+  padding: 60px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contato-formulario {
+  border-radius: 0 5px 5px 0;
+  background: var(--cor-0) url("../../img/dec/bottom-right.svg") no-repeat
+    bottom 20px right 20px;
+}
+
+.contato-dados {
+  border-radius: 5px 0 0 5px;
+  background: var(--cor-12) url("../../img/dec/bottom-left.svg") no-repeat
+    bottom 20px left 20px;
+}
+
+.contato-dados h2 {
+  margin-bottom: 60px;
+}
+
+.contato-endereco {
+  margin-bottom: 32px;
+  padding-left: 28px;
+  background: url("../../img/icones/local.svg") no-repeat 0px 2px;
+}
+
+.contato-endereco p {
+  margin-bottom: 8px;
+}
+
+.contato-meios a {
+  display: block;
+  max-width: max-content;
+  margin-bottom: 8px;
+  padding-left: 28px;
+}
+
+.contato-meios a:hover {
+  color: var(--cor-0);
+}
+
+.contato-meios a:nth-child(1) {
+  background: url("../../img/icones/email.svg") no-repeat 0px 2px;
+}
+
+.contato-meios a:nth-child(2) {
+  margin-bottom: 32px;
+}
+
+.contato-meios a:nth-child(3) {
+  margin-bottom: 60px;
+  background: url("../../img/icones/telefone.svg") no-repeat 0px 2px;
+}
+
+.contato-redes {
+  display: flex;
+  gap: 32px;
+  padding-left: 28px;
+}
+
+/* lojas locais */
+
+.lojas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.lojas img {
+  border-radius: 4px 4px 0 0;
+}
+
+.lojas h2 {
+  grid-column: 1/-1;
+  margin-bottom: 60px;
+}
+
+.lojas-item {
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  background: var(--cor-0);
+}
+
+.lojas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 16px;
+  padding: 32px;
+}
+
+.lojas-conteudo h3,
+.lojas-tempo {
+  grid-column: 1/-1;
+}
+
+.lojas-dados {
+  display: grid;
+  gap: 8px;
+  border-left: 2px solid var(--cor-2);
+  padding-left: 12px;
+  justify-items: start;
+}
+
+.lojas-tempo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .lojas {
+    gap: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .lojas h2 {
+    margin-bottom: 32px;
+  }
+  .lojas-conteudo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .lojas {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* responsivo */
+
+@media (max-width: 800px) {
+  .contato {
+    grid-template-columns: 1fr;
+  }
+  .contato-dados,
+  .contato-formulario {
+    padding: 20px;
+  }
+  .contato-dados {
+    border-radius: 5px 5px 0 0;
+    background: var(--cor-12);
+  }
+  .contato-formulario {
+    border-radius: 0 0 5px 5px;
+  }
+  .contato-dados h2 {
+    margin-bottom: 32px;
+  }
+  .contato-meios a:nth-child(3) {
+    margin-bottom: 32px;
+  }
+  .contato-redes {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bicicletas-bg:nth-child(odd) {
+    background-image: none;
+    background-color: var(--cor-11);
+  }
+  .bicicletas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .bicicletas-conteudo {
+    grid-template-columns: 1fr;
+  }
+  .bicicletas ul {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+  }
+  .bicicletas a {
+    place-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .bicicletas ul {
+    font-size: 1rem;
+  }
+}
